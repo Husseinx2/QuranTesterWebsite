@@ -1,16 +1,23 @@
 <template>
   <div class="home">
-<chapter-test/>
+<home-welcome-vue/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import ChapterTest from '../components/ChapterTest.vue'
+import HomeWelcomeVue from '@/components/HomeWelcome.vue';
 export default {
-  name: 'HomeView',
-  components: {
-    ChapterTest
-  }
-}
+  name: "HomeView",
+  components: {HomeWelcomeVue},
+  data() {
+    return {
+     
+      
+    };
+  },
+};
 </script>
+
+<style scoped>
+
+</style>
