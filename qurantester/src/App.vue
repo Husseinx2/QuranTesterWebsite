@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div >
     <page-header/>
     <router-view/>
   </div>
@@ -14,9 +14,9 @@ export default {
         choice: {}
      }
    },
-   created(){
+    created(){
       this.$store.commit("GET_CHAPTERS");
-   }
+    }
   
 }
 </script>
@@ -24,9 +24,8 @@ export default {
 <style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: rgb(0, 0, 199);
 }
 
-nav {
-  padding: 30px;
-}
+
 </style>

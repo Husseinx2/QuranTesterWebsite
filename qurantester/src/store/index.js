@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    amountCorrect: 0,
+    ammountCorrect: 0,
+    QuestionsCount: 0,
     userCorrect: false,
     chapters: {},
     test: {},
@@ -13,28 +14,19 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    CHECK_ANSWER(state, payload) {
-      state.userCorrect = payload;
-      if (payload == true) {
-        state.amountCorrect++
+    INCREMENT(state, payload) {
+      if (payload) {
+        state.ammountCorrect++
       }
-    },
-    GENERATE_TEST(state,payload) {
-      if (state.amountCorrect < 10) {
-        apiservice.chapterTest(payload).then((response) => {
-          state.test = response.data;
-        })
-      }
-      else {
-        state.test = {}
-        state.test.question = ""
-      }
-      state.userCorrect = false;
     },
     GET_CHAPTERS(state) {
       apiservice.listChapters().then((response) => {
         state.chapters = response.data;
       })
+    },
+    RESET(state) {
+      state.QuestionsCount = 0;
+      state.ammountCorrect = 0;
     }
 
   },

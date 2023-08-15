@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section">
      <h1 class="aboutHeader">About Quran Tester</h1>
     <section class="about">
       <p>
@@ -32,7 +32,7 @@
         Embrace this transformative experience with us, and let the Quran flow
         through your heart as you strengthen your connection with its divine
         words. Together, we embark on a path of continuous growth, enabling you
-        to become a proficient Hafiz or Hafiza.
+        to become a proficient Hafidth or Hafidtha.
       </p>
     </section>
     <h1 class="benefitsHeader">
@@ -100,17 +100,18 @@ export default {};
 </script>
 
 <style scoped>
+
 div {
   display: grid;
   grid-template: 1fr 1fr;
   grid-template-areas:
     "aboutHeader missionHeader "
-    "about  mission"
+    "about mission"
     "benefitsHeader benefitsHeader"
     "benefits benefits"
     "supportHeader supportHeader"
     "support support";
-    background-color:lightyellow;
+    
 }
 h1,h2,h3,h4,h5{
   position: relative;
@@ -118,11 +119,12 @@ h1,h2,h3,h4,h5{
 }
 .about {
   grid-area: about;
-  border-right: 1px solid black;
   margin: 15px;
 }
 .mission {
   grid-area: mission;
+    margin: 15px;
+
 }
 .missionHeader {
   grid-area: missionHeader;

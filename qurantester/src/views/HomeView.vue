@@ -11,13 +11,11 @@ export default {
   components: {HomeWelcomeVue},
   data() {
     return {
-     
-      
+    
     };
   },
 };
 </script>
-
 <style scoped>
 
 </style>

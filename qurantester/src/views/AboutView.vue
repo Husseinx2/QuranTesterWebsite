@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="holder">
 <about-section-vue/>
   </div>
 </template>
@@ -11,6 +11,6 @@ components:{AboutSectionVue}
 }
 </script>
 
-<style>
-
+<style scoped>
+ 
 </style>
