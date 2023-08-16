@@ -2,12 +2,22 @@
   <div class="tester">
     <h1>{{ $store.state.ammountCorrect }}/10</h1>
     <h3 id="popover-target-1">{{ test.question.text }}</h3>
-    <b-popover class="popover" target="popover-target-1" triggers="hover" placement="center">
-      <audio v-bind:src="test.question.audioUrl" controls />
+    <b-popover
+      class="popover"
+      target="popover-target-1"
+      triggers="hover"
+      placement="center"
+    >
+      <audio v-bind:src="test.question.audioUrl" controls autoplay />
     </b-popover>
+    <b-button variant="info" v-show="!showQuestion" v-on:click="toggleButton"
+      >Ready</b-button
+    >
+
     <b-form-group
       label="Choose The Correct Answer"
       v-slot="{ ariaDescribedby }"
+      v-show="showQuestion"
     >
       <b-form-radio
         v-for="choice in test.multipleChoice"
@@ -30,6 +40,7 @@ export default {
     return {
       test: {},
       selected: "",
+      showQuestion: false,
     };
   },
   props: ["item"],
@@ -39,6 +50,13 @@ export default {
         this.test = response.data;
       });
     },
+    toggleButton() {
+      if (this.showQuestion) {
+        this.showQuestion = false;
+      } else {
+        this.showQuestion = true;
+      }
+    },
     submit() {
       if (this.selected) {
         if (this.selected == this.test.answer.text) {
@@ -47,10 +65,13 @@ export default {
             this.$store.commit("RESET");
             this.$router.push("/test");
           } else {
+            this.toggleButton();
             this.generateTest();
           }
         } else {
           console.log("false");
+          this.toggleButton();
+          this.generateTest();
         }
       }
     },
