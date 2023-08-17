@@ -1,7 +1,7 @@
 <template>
   <section class="test-tab">
-    <select v-show="true">
-      <option v-for="volume in volumes" v-bind:key="volume" value="volume">
+    <select  v-model="choice">
+      <option v-for="volume in volumes" v-bind:key="volume" v-bind:value="volume">
         {{ volume }}
       </option>
     </select>
@@ -14,12 +14,19 @@
 
 <script>
 export default {
-  name:'volumeTest',
+  name: "volumeTest",
   data() {
     return {
-      showSelect: true,
       volumes: [],
+      choice: 1
     };
+  },
+  methods: {
+    submit() {
+      if (this.choice) {
+        this.$router.push({ name: "volumeTest", params: { id: this.choice } });
+      }
+    },
   },
   created() {
     for (let i = 1; i <= 30; i++) {
@@ -29,9 +36,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .test-tab select option {
   font-family: "hafs";
   font-size: 15px;
+}
+section {
+  text-align: center;
 }
 </style>

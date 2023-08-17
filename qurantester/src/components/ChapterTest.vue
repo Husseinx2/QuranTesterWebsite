@@ -38,9 +38,12 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .test-tab select option {
   font-family: "hafs";
   font-size: 15px;
+}
+section {
+  text-align: center;
 }
 </style>
