@@ -1,19 +1,22 @@
 <template>
   <section>
     <div>
-      <b-tabs content-class="mt-3">
-        <b-tab title="Single Chapter" active
-          ><single-chapter-test v-bind:item="chapterNumber"/></b-tab>
-        <b-tab title="Multiple Chapters"><h1>Tab B</h1></b-tab>
+      <b-tabs content-class="mt-9">
+        <b-tab title="Single Chapter"  lazy
+          ><single-chapter-test v-bind:item="chapterNumber"  /></b-tab>
+        <b-tab title="Hard Chapter Test" lazy
+          ><hardchapter-test v-bind:item="chapterNumber" />
+        </b-tab>
       </b-tabs>
     </div>
   </section>
 </template>
 
 <script>
-import SingleChapterTest from '@/components/SingleChapterTest.vue';
+import SingleChapterTest from "@/components/SingleChapterTest.vue";
+import hardchapterTest from "@/components/HardChapterTest.vue";
 export default {
-  components:{SingleChapterTest},
+  components: { SingleChapterTest, hardchapterTest },
   data() {
     return {
       chapterNumber: 0,
@@ -25,5 +28,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

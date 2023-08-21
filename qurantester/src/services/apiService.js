@@ -12,8 +12,15 @@ export default {
   chapterTest(id) {
     return https.get(`/chapter/test/${id}`);
   },
+  hardChapterTest(id){
+    return https.get(`/chapter/hardTest/${id}`);
+  },
   volumeTest(id) {
     return https.get(`/volume/test/${id}`);
+  },
+  hardVolumeTest(id){
+    return https.get(`/volume/hardTest/${id}`);
+
   },
   multipleVolumesTest(first, last) {
     return https.get(`/volume/test/${first}/${last}`);
