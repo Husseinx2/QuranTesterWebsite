@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <section>
+  <div class="home">
+    <section class="header">
       <h1 class="header">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h1>
       <h2>Allah <span>(SWT)</span> Says In The Holy Quran:</h2>
 
       <h2 id="popover-target-1" class="text">{{ ayah.text }}</h2>
-      <b-popover target="popover-target-1" triggers="hover" placement="right">
+      <b-popover target="popover-target-1" triggers="hover" placement="center">
         <p class="translation">
           Indeed, it is We who sent down the Qur'an and indeed, We will be its
           guardian
@@ -35,6 +35,17 @@
           <router-link to="/about"> <h1>Resources</h1> </router-link>
         </li>
       </ul>
+      <div class="video">
+        <h1> One of  the best ways To strengthen your connection and love with the quran is to Listen, Every couple of days We'll put a new video here with Beautiful recitation for you to enjoy!</h1>
+        <b-embed
+        class="embed"
+          type="iframe"
+          aspect="16by9"
+          
+          src="https://www.youtube.com/embed/d96J2KNMm0w"
+          allowfullscreen
+        ></b-embed>
+      </div>
     </section>
   </div>
 </template>
@@ -61,14 +72,17 @@ export default {
 </script>
 
 <style scoped>
-
+.home {
+  background-color: aqua;
+}
 .header {
   font-family: p22-v1;
   text-align: center;
 }
 ul {
-  display: grid;
+  list-style-type: none;
 }
+
 span {
   color: grey;
   font-size: 15px;
@@ -80,8 +94,13 @@ audio {
   width: 100%;
 }
 .text {
-  font-family: "hafs"
-
+  font-family: "hafs";
 }
-
+.video {
+  text-align: center;
+}
+.embed {
+  height: 400px;
+  width:40%;
+}
 </style>

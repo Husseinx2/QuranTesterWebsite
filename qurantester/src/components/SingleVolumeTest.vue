@@ -1,6 +1,6 @@
 <template>
   <div class="tester">
-    <h1>{{ $store.state.ammountCorrect }}/10</h1>
+    <h1>{{ammountCorrect}}/10</h1>
     <h3 id="popover-target-1">{{ test.question.text }}</h3>
     <b-popover
       class="popover"
@@ -10,7 +10,10 @@
     >
       <audio v-bind:src="test.question.audioUrl" controls autoplay />
     </b-popover>
-    <b-button variant="info" v-show="!showQuestion" v-on:click="toggleButton"
+    <b-button
+      variant="info"
+      v-show="!showQuestion && !showAnswer"
+      v-on:click="toggleButton"
       >Ready</b-button
     >
 
@@ -31,6 +34,21 @@
       >
       <b-button variant="info" v-on:click="submit">Submit</b-button>
     </b-form-group>
+    <!-- Correct Answer If Wrong -->
+    <section v-show="showAnswer">
+      <b-icon icon="exclamation-circle-fill" variant="danger"></b-icon>
+      Incorrect, the correct Answer is:
+      <h3 id="popover-target-2">{{ test.answer.text }}</h3>
+      <b-popover
+        class="popover"
+        target="popover-target-2"
+        triggers="hover"
+        placement="center"
+      >
+        <audio v-bind:src="test.answer.audioUrl" controls autoplay />
+      </b-popover>
+      <b-button variant="info" v-on:click="hideAnswer">Continue</b-button>
+    </section>
   </div>
 </template>
 <script>
@@ -41,6 +59,8 @@ export default {
       test: {},
       selected: "",
       showQuestion: false,
+      showAnswer: false,
+      ammountCorrect: 0,
     };
   },
   props: ["item"],
@@ -57,21 +77,24 @@ export default {
         this.showQuestion = true;
       }
     },
+    hideAnswer() {
+      this.showAnswer = false;
+      this.selected = "";
+      this.generateTest();
+    },
     submit() {
       if (this.selected) {
         if (this.selected == this.test.answer.text) {
-          this.$store.commit("INCREMENT", true);
-          if (this.$store.state.ammountCorrect == 10) {
-            this.$store.commit("RESET");
+          this.ammountCorrect +=1;
+          if (this.ammountCorrect == 10) {
             this.$router.push("/test");
           } else {
             this.toggleButton();
             this.generateTest();
           }
         } else {
-          console.log("false");
-          this.toggleButton();
-          this.generateTest();
+          this.showQuestion = false;
+          this.showAnswer = true;
         }
       }
     },
