@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="section">
     <div>
       <b-tabs content-class="mt-3">
         <b-tab title="Test By Chapter" active
@@ -20,5 +20,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

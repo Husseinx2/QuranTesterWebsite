@@ -36,13 +36,13 @@
         </li>
       </ul>
       <div class="video">
-        <h1> One of  the best ways To strengthen your connection and love with the quran is to Listen, Every couple of days We'll put a new video here with Beautiful recitation for you to enjoy!</h1>
+        <h1> One of  the best ways To strengthen your connection and love with the Quran is to Listen, Every couple of days We'll put a new video here with Beautiful recitation for you to enjoy!</h1>
         <b-embed
         class="embed"
           type="iframe"
           aspect="16by9"
           
-          src="https://www.youtube.com/embed/d96J2KNMm0w"
+          src="https://www.youtube.com/embed/Oh01qYCzVE4"
           allowfullscreen
         ></b-embed>
       </div>

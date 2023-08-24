@@ -1,7 +1,7 @@
 <template>
   <div class="tester">
     <!-- Amount Correct -->
-    <h1>{{ammountCorrect}}/10</h1>
+    <h1>{{ ammountCorrect }}/10</h1>
     <!-- Question -->
     <h3 id="popover-target-1">{{ test.verse.text }}</h3>
     <b-popover
@@ -10,7 +10,7 @@
       triggers="hover"
       placement="center"
     >
-      <audio v-bind:src="verse.question.audioUrl" controls autoplay />
+      <audio v-bind:src="test.verse.audioUrl" controls autoplay />
     </b-popover>
     <!-- prompt to display the question -->
     <b-button
@@ -25,16 +25,21 @@
       v-slot="{ ariaDescribedby }"
       v-show="showQuestion"
     >
-      <b-form-radio
-        v-for="chapter in $store.state.chapters"
-        v-bind:key="chapter"
-        v-model="selected"
-        :aria-describedby="ariaDescribedby"
-        name="some-radios"
-        v-bind:value="chapter"
-      >
-        <h4>{{ chapter }}</h4></b-form-radio
-      >
+      <select v-model="selected" :aria-describedby="ariaDescribedby">
+        <option
+          v-for="chapter in $store.state.chapters"
+          v-bind:key="chapter"
+          v-bind:value="chapter.name"
+        >
+          {{ chapter.number }}. {{ chapter.englishName }} || {{ chapter.name }}
+        </option>
+      </select>
+      <br />
+      <span v-show="errorMessage">
+        <b-icon icon="exclamation-circle-fill" variant="warning"></b-icon>
+        Choose A Valid Choice
+      </span>
+      <br />
       <b-button variant="info" v-on:click="submit">Submit</b-button>
     </b-form-group>
 
@@ -42,7 +47,15 @@
     <section v-show="showAnswer">
       <b-icon icon="exclamation-circle-fill" variant="danger"></b-icon>
       Incorrect, the correct Answer is:
-      <h3 id="popover-target-2">{{ test.name.englishName }}</h3>
+      <h3 id="popover-target-2">{{ test.name.name }}</h3>
+      <b-popover
+        class="popover"
+        target="popover-target-2"
+        triggers="hover"
+        placement="center"
+      >
+        {{ test.name.number }}. {{ test.name.englishName }}
+      </b-popover>
       <b-button variant="info" v-on:click="hideAnswer">Continue</b-button>
     </section>
   </div>
@@ -56,7 +69,8 @@ export default {
       selected: "",
       showQuestion: false,
       showAnswer: false,
-      ammountCorrect:0
+      ammountCorrect: 0,
+      errorMessage: false,
     };
   },
   props: ["item"],
@@ -80,9 +94,10 @@ export default {
     },
     submit() {
       if (this.selected) {
-        if (this.selected == this.test.name) {
+        this.errorMessage = false;
+        if (this.selected == this.test.name.name) {
           this.selected = "";
-          this.ammountCorrect +=1;
+          this.ammountCorrect += 1;
           if (this.$store.state.ammountCorrect == 10) {
             this.$router.push("/test");
           } else {
@@ -93,6 +108,8 @@ export default {
           this.showQuestion = false;
           this.showAnswer = true;
         }
+      } else {
+        this.errorMessage = true;
       }
     },
   },

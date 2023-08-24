@@ -116,15 +116,16 @@ div {
 }
 h1,h2,h3,h4,h5{
   position: relative;
-  left:15px
+  margin-left: 15px;
 }
 .about {
   grid-area: about;
-  margin: 15px;
+  margin-left:10px;
+  margin-right:5px;
 }
 .mission {
   grid-area: mission;
-    margin: 15px;
+  margin-right: 20px;
 
 }
 .missionHeader {
@@ -144,11 +145,14 @@ h1,h2,h3,h4,h5{
 }
 .support {
   grid-area: support;
+  margin-bottom: 45px;
+  
 
 }
 .support p {
   position: relative;
-  left:30px
+    margin-left:15px;
+
 }
 .supportHeader {
   grid-area: supportHeader;

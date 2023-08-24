@@ -1,7 +1,5 @@
 <template>
-  <div class="holder">
 <about-section-vue/>
-  </div>
 </template>
 
 <script>
