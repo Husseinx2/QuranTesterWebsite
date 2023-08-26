@@ -5,7 +5,7 @@ import AboutView from '../views/AboutView.vue'
 import TestView from '../views/TestView.vue'
 import chapterTestView from '../views/ChapterTestView'
 import VolumeTestView from '../views/VolumeTestView'
-
+import ResourcesView from '../views/ResourcesView'
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,6 +18,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutView
+  },
+  {
+    path:'/resources',
+    name:'resources',
+    component:ResourcesView
   },
   {
     path:'/test',

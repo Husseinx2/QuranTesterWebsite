@@ -6,8 +6,8 @@
         <b-tab title="Multiple Volumes" lazy><multiple-volume-test v-bind:item="volumeNumber"/></b-tab>
         <b-tab title="Single Volume (Hard)" lazy><single-volume-hard v-bind:item="volumeNumber"/></b-tab>
         <b-tab title="Multiple Volume (Hard)" lazy>  <multiple-volume-hard-test v-bind:item="volumeNumber"/></b-tab>
-        <b-tab title="Single Volume Surah Name Test" lazy> <surah-name-test v-bind:item="volumeNumber"/></b-tab>
-        <b-tab title="Multiple Volume Surah Name Test" lazy> <multiple-surah-name-test v-bind:item="volumeNumber"/> </b-tab>
+        <b-tab title="Chapter Name Test" lazy> <surah-name-test v-bind:item="volumeNumber"/></b-tab>
+        <b-tab title="Multiple Volume Chapter Name Test" lazy> <multiple-surah-name-test v-bind:item="volumeNumber"/> </b-tab>
       </b-tabs>
     </div>
   </section>

@@ -2,7 +2,7 @@
   <section>
     <div>
       <b-tabs content-class="mt-9">
-        <b-tab title="Single Chapter"  lazy
+        <b-tab title="Chapter Test"  lazy
           ><single-chapter-test v-bind:item="chapterNumber"  /></b-tab>
         <b-tab title="Hard Chapter Test" lazy
           ><hardchapter-test v-bind:item="chapterNumber" />
