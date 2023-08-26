@@ -49,7 +49,7 @@
           class="embed"
           type="iframe"
           aspect="16by9"
-          src="https://www.youtube.com/embed/L588--HPq3s?si=jH1sTY9Yb8v4NIkr"
+          src="https://www.youtube.com/embed/d96J2KNMm0w?si=P4pDWJAf0duB8pcT"
           allowfullscreen
         ></b-embed>
       </div>
