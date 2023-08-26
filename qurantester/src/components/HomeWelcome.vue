@@ -8,7 +8,7 @@
       </h2>
 
       <h2 id="popover-target-1" class="text">{{ ayah.text }}</h2>
-      <b-popover target="popover-target-1" triggers="hover" placement="center">
+      <b-popover target="popover-target-1" triggers="click" placement="center">
         <p class="translation">
           Indeed, it is We who sent down the Qur'an and indeed, We will be its
           guardian
