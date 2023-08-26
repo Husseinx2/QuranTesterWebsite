@@ -6,6 +6,7 @@ import TestView from '../views/TestView.vue'
 import chapterTestView from '../views/ChapterTestView'
 import VolumeTestView from '../views/VolumeTestView'
 import ResourcesView from '../views/ResourcesView'
+import NotFound from '../views/NotFound'
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,6 +29,11 @@ const routes = [
     path:'/test',
     name:'test',
     component:TestView
+  },
+  {
+    path:'/*',
+    name:'notFound',
+    component:NotFound
   },
   {
     path:'/chapterTest/:id',

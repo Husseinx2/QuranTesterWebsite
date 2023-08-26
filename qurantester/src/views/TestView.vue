@@ -12,14 +12,18 @@
 </template>
 
 <script>
-import ChapterTest from '@/components/ChapterTest.vue';
-import VolumeTest from '@/components/VolumeTest.vue';
+import ChapterTest from "@/components/ChapterTest.vue";
+import VolumeTest from "@/components/VolumeTest.vue";
 export default {
-  components: {ChapterTest,VolumeTest},
- 
+  components: { ChapterTest, VolumeTest },
 };
 </script>
 
 <style scoped>
+.section {
+  min-height: 100vh;
 
+  align-items: center;
+  background: linear-gradient(to bottom,  #0050b3, #001f3f);
+}
 </style>

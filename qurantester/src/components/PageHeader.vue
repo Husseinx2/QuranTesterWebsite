@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar class="header" toggleable="lg" type="dark" variant="primary">
+    <b-navbar class="header" toggleable="lg" type="dark" variant="primary"  >
       <b-navbar-brand href="/">
         <img src="../../public/Logo.png" alt="logo" />
         <b style="color: black">Quran</b>Tester
@@ -31,4 +31,6 @@ export default {};
 img {
   height: 100px;
 }
+.header {
+background: linear-gradient(to top, #0050B3, #001429);}
 </style>

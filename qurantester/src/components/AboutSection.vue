@@ -1,9 +1,8 @@
 <template>
   <div class="section">
-     <h1 class="aboutHeader">About Quran Tester</h1>
+    <h1 class="aboutHeader">About Quran Tester</h1>
     <section class="about">
       <p>
-
         The Quran is a profound source of wisdom, guidance, and spiritual
         nourishment. Our mission is to provide a unique platform that enables
         users to embark on a transformative journey of strengthening their
@@ -100,7 +99,6 @@ export default {};
 </script>
 
 <style scoped>
-
 div {
   display: grid;
   grid-template: 1fr 1fr;
@@ -111,22 +109,24 @@ div {
     "benefits benefits"
     "supportHeader supportHeader"
     "support support";
-    background-color: rgb(128, 213, 247);
-    
+  background: linear-gradient(to bottom, #0050b3, #87cefa);
 }
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   position: relative;
   margin-left: 15px;
 }
 .about {
   grid-area: about;
-  margin-left:10px;
-  margin-right:5px;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 .mission {
   grid-area: mission;
   margin-right: 20px;
-
 }
 .missionHeader {
   grid-area: missionHeader;
@@ -146,13 +146,10 @@ h1,h2,h3,h4,h5{
 .support {
   grid-area: support;
   margin-bottom: 45px;
-  
-
 }
 .support p {
   position: relative;
-    margin-left:15px;
-
+  margin-left: 15px;
 }
 .supportHeader {
   grid-area: supportHeader;

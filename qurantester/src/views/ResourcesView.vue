@@ -65,6 +65,7 @@ export default {};
 }
 
 .resources-container {
+  background: linear-gradient(to bottom, #0050b3, #87cefa);
   display: grid;
   grid-template-columns: 2fr, 1fr;
   gap: 20px;
@@ -73,7 +74,12 @@ export default {};
     "tanzil quranapi"
     "tarteel .";
 }
-
+a {
+  color:white
+}
+a:hover {
+  color:black
+}
 .tanzil {
   grid-area: tanzil;
 }

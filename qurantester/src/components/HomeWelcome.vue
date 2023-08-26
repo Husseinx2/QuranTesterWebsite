@@ -3,7 +3,9 @@
     <section class="header">
       <h1 class="header">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h1>
       <br />
-      <h2>Allah <span>(SWT)</span> Says In The Holy Quran:</h2>
+      <h2 v-show="ayah.text">
+        Allah <span>(SWT)</span> Says In The Holy Quran:
+      </h2>
 
       <h2 id="popover-target-1" class="text">{{ ayah.text }}</h2>
       <b-popover target="popover-target-1" triggers="hover" placement="center">
@@ -78,15 +80,7 @@ export default {
 
 <style scoped>
 .home {
-  background-image: url("https://t4.ftcdn.net/jpg/03/43/41/99/360_F_343419935_2OovIWNXY8uzJvkVNokfzRfGFGxkpdwh.jpg");
-  background-size: cover;
-  background-position: center;
-  /* background-image: linear-gradient(
-    to bottom right,
-    rgb(0, 255, 255),
-    rgb(19, 174, 174),
-    rgb(191, 58, 80)
-  ); */
+  background: linear-gradient(to bottom, #0050B3, #87CEFA);
 }
 .header {
   font-family: p22-v1;
