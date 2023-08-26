@@ -1,11 +1,11 @@
 <template>
   <div class="tester">
-    <h1>{{ammountCorrect}}/10</h1>
+    <h1>{{ ammountCorrect }}/10</h1>
     <h3 id="popover-target-1">{{ test.question.text }}</h3>
     <b-popover
       class="popover"
       target="popover-target-1"
-      triggers="hover"
+      triggers="click"
       placement="center"
     >
       <audio v-bind:src="test.question.audioUrl" controls autoplay />
@@ -42,7 +42,7 @@
       <b-popover
         class="popover"
         target="popover-target-2"
-        triggers="hover"
+        triggers="click"
         placement="center"
       >
         <audio v-bind:src="test.answer.audioUrl" controls autoplay />
@@ -85,7 +85,7 @@ export default {
     submit() {
       if (this.selected) {
         if (this.selected == this.test.answer.text) {
-          this.ammountCorrect +=1;
+          this.ammountCorrect += 1;
           if (this.ammountCorrect == 10) {
             this.$router.push("/test");
           } else {
