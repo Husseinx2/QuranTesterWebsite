@@ -1,7 +1,7 @@
 <template>
   <section>
     <div>
-      <b-tabs content-class="mt-3">
+      <b-tabs content-class="mt-3" justified>
         <b-tab title="Single Volume" lazy
           ><single-volume-test v-bind:item="volumeNumber"
         /></b-tab>
