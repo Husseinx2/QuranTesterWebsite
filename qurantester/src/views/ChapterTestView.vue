@@ -24,9 +24,7 @@ export default {
   },
   created() {
     this.chapterNumber = this.$route.params.id;
-    if (this.chapterNumber > 114) {
-      this.$router.push("/*");
-    }
+    
   },
 };
 </script>

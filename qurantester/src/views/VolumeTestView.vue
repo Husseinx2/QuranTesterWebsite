@@ -48,9 +48,7 @@ export default {
   },
   created() {
     this.volumeNumber = this.$route.params.id;
-    if (this.volumeNumber > 30) {
-      this.$router.push("/*");
-    }
+   
   },
 };
 </script>
