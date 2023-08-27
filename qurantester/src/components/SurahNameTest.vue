@@ -12,6 +12,7 @@
     >
       <audio v-bind:src="test.verse.audioUrl" controls autoplay />
     </b-popover>
+    <br />
     <!-- prompt to display the question -->
     <b-button
       variant="info"

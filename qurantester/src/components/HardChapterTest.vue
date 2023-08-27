@@ -1,7 +1,7 @@
 <template>
   <div class="tester">
     <!-- Amount Correct -->
-    <h1>{{ammountCorrect}}/10</h1>
+    <h1>{{ ammountCorrect }}/10</h1>
     <!-- Question -->
     <h3 id="popover-target-1">{{ test.question.text }}</h3>
     <b-popover
@@ -12,6 +12,7 @@
     >
       <audio v-bind:src="test.question.audioUrl" controls autoplay />
     </b-popover>
+    <br />
     <!-- prompt to display the question -->
     <b-button
       variant="info"
@@ -64,7 +65,7 @@ export default {
       selected: "",
       showQuestion: false,
       showAnswer: false,
-      ammountCorrect:0
+      ammountCorrect: 0,
     };
   },
   props: ["item"],
@@ -90,7 +91,7 @@ export default {
       if (this.selected) {
         if (this.selected == this.test.answer.text) {
           this.selected = "";
-          this.ammountCorrect +=1
+          this.ammountCorrect += 1;
           if (this.ammountCorrect == 10) {
             this.$router.push("/test");
           } else {

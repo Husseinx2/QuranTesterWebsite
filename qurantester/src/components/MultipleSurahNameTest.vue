@@ -35,6 +35,7 @@
       >
         <audio v-bind:src="test.verse.audioUrl" controls autoplay />
       </b-popover>
+      <br />
       <!-- prompt to display the question -->
       <b-button
         variant="info"
@@ -71,15 +72,15 @@
       <section v-show="showAnswer">
         <b-icon icon="exclamation-circle-fill" variant="danger"></b-icon>
         Incorrect, the correct Answer is:
-        <h3 id="popover-target-2"> {{ test.name.name }}</h3>
+        <h3 id="popover-target-2">{{ test.name.name }}</h3>
         <b-popover
-        class="popover"
-        target="popover-target-2"
-        triggers="click"
-        placement="center"
-      >
-      {{test.name.number}}. {{test.name.englishName}}
-      </b-popover>
+          class="popover"
+          target="popover-target-2"
+          triggers="click"
+          placement="center"
+        >
+          {{ test.name.number }}. {{ test.name.englishName }}
+        </b-popover>
         <b-button variant="info" v-on:click="hideAnswer">Continue</b-button>
       </section>
     </div>

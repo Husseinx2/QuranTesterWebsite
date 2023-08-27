@@ -10,6 +10,7 @@
     >
       <audio v-bind:src="test.question.audioUrl" controls autoplay />
     </b-popover>
+    <br />
     <b-button
       variant="info"
       v-show="!showQuestion && !showAnswer"
