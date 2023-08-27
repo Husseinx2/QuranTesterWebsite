@@ -7,7 +7,7 @@
     <b-popover
       class="popover"
       target="popover-target-1"
-      triggers="hover"
+      triggers="click"
       placement="center"
     >
       <audio v-bind:src="test.verse.audioUrl" controls autoplay />

@@ -75,7 +75,7 @@
         <b-popover
         class="popover"
         target="popover-target-2"
-        triggers="hover"
+        triggers="click"
         placement="center"
       >
       {{test.name.number}}. {{test.name.englishName}}
