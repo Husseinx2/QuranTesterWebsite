@@ -1,7 +1,7 @@
 <template>
   <section>
     <div>
-      <b-tabs content-class="mt-9"  justified>
+      <b-tabs content-class="mt-9"  >
         <b-tab title="Chapter Test" lazy
           ><single-chapter-test v-bind:item="chapterNumber"  /></b-tab>
         <b-tab title="Hard Chapter Test" lazy
