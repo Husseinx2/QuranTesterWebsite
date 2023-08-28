@@ -18,7 +18,7 @@
       </select>
       <br />
       <br />
-      <b-button variant="outline-info" v-on:click="startTest"
+      <b-button variant="outline-primary" class="button" v-on:click="startTest"
         >Start Test</b-button
       >
     </section>
@@ -157,6 +157,7 @@ export default {
       this.volumes.push(i);
     }
   },
+
 };
 </script>
 
@@ -164,6 +165,12 @@ export default {
 div .tester {
   font-family: "p22-v1";
   text-align: center;
+}
+.button {
+  color: black;
+}
+.button:hover {
+  background-color: white;
 }
 audio {
   width: 100%;

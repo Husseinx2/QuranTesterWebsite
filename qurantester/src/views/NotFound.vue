@@ -14,6 +14,6 @@ div {
   min-height: 100vh;
   color: black;
   align-items: center;
-  background: linear-gradient(to bottom, #0050b3, #001f3f);
+  background: linear-gradient(to bottom, #7ba9e0, #d2deec, #115292);
 }
 </style>

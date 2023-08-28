@@ -18,7 +18,7 @@
       </select>
       <br />
       <br />
-      <b-button variant="outline-info" v-on:click="startTest"
+      <b-button variant="outline-primary" class="button" v-on:click="startTest"
         >Start Test</b-button
       >
     </section>
@@ -166,6 +166,12 @@ export default {
 </script>
 
 <style scoped>
+.button {
+  color: black;
+}
+.button:hover {
+  background-color: white;
+}
 div .tester {
   font-family: "p22-v1";
   text-align: center;

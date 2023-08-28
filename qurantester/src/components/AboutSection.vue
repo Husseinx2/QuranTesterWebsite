@@ -160,6 +160,6 @@ h5 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 span {
-  color: cadetblue;
+  color: rgb(255, 0, 0);
 }
 </style>

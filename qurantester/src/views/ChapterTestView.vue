@@ -32,7 +32,7 @@ export default {
 <style scoped>
 section{
   min-height: 100vh;
-  color:white;
+  color:black;
   align-items: center;
   background: linear-gradient(to bottom,  #7ba9e0,#d2deec, #001f3f);
 }

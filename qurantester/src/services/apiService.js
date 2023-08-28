@@ -38,5 +38,4 @@ export default {
   multipleNameTest(first,last) {
   return https.get(`/volume/surahnametest/${first}/${last}`);
   }
-
 }
