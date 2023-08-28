@@ -32,5 +32,5 @@ img {
   height: 100px;
 }
 .header {
-background: linear-gradient(to top, #0050B3, #001429);}
+background: linear-gradient(to top, #7ba9e0, #032952);}
 </style>

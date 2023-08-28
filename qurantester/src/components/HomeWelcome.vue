@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
 .home {
-  background: linear-gradient(to bottom, #0050B3, #87CEFA);
+  background: linear-gradient(to bottom, #7ba9e0, #d2deec, #115292);
 }
 .header {
   font-family: p22-v1;

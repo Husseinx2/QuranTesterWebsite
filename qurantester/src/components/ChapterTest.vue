@@ -11,11 +11,14 @@
       </option>
     </select>
     <br />
-    <span v-show="errorMessage"> 
-    <b-icon icon="exclamation-circle-fill" variant="warning"></b-icon> Choose A Valid Choice
+    <span v-show="errorMessage">
+      <b-icon icon="exclamation-circle-fill" variant="warning"></b-icon> Choose
+      A Valid Choice
     </span>
     <br />
-    <b-button variant="outline-info" v-on:click="submit">Start Test</b-button>
+    <b-button variant="outline-primary" v-on:click="submit" class="button"
+      >Start Test</b-button
+    >
   </section>
 </template>
 
@@ -39,6 +42,12 @@ export default {
 };
 </script>
 <style scoped>
+.button {
+  color: black;
+}
+.button:hover {
+  background-color: white;
+}
 .test-tab select option {
   font-family: "hafs";
   font-size: 15px;

@@ -65,7 +65,8 @@ export default {};
 }
 
 .resources-container {
-  background: linear-gradient(to bottom, #0050b3, #87cefa);
+  min-height: 90vh;
+  background: linear-gradient(to bottom, #7ba9e0, #d2deec, #115292);
   display: grid;
   grid-template-columns: 2fr, 1fr;
   gap: 20px;
@@ -75,10 +76,10 @@ export default {};
     "tarteel .";
 }
 a {
-  color:white
+  color: white;
 }
 a:hover {
-  color:black
+  color: black;
 }
 .tanzil {
   grid-area: tanzil;

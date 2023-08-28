@@ -65,11 +65,11 @@
       </ul>
 
       <b
-        ><h3>
+        ><h5>
           The Benefits of memorizing the quran are so much that we would have
           trouble fitting it all in one page. We ask allah to make us among
           those who are companions of the Quran.
-        </h3></b
+        </h5></b
       >
     </section>
     <h1 class="Reminder">Message From Us</h1>
@@ -100,6 +100,7 @@ export default {};
 
 <style scoped>
 div {
+  min-height: 100vh;
   display: grid;
   grid-template: 1fr 1fr;
   grid-template-areas:
@@ -109,7 +110,7 @@ div {
     "benefits benefits"
     "supportHeader supportHeader"
     "support support";
-  background: linear-gradient(to bottom, #0050b3, #87cefa);
+  background: linear-gradient(to bottom, #7ba9e0, #d2deec, #115292);
 }
 h1,
 h2,

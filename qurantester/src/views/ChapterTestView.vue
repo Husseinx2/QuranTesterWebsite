@@ -34,6 +34,6 @@ section{
   min-height: 100vh;
   color:white;
   align-items: center;
-  background: linear-gradient(to bottom, #0050b3, #001f3f);
+  background: linear-gradient(to bottom,  #7ba9e0,#d2deec, #001f3f);
 }
 </style>
