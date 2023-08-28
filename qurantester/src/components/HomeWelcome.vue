@@ -40,11 +40,11 @@
         </li>
       </ul>
       <div class="video">
-        <h3>
-          One of the best ways To strengthen your connection and love with the
-          Quran is to Listen, Every couple of days We'll put a new video here
-          with Beautiful recitation for you to enjoy!
-        </h3>
+        <h4>
+          One of the best ways to strengthen your connection and love with the
+          Quran is to Listen. Every couple of days we'll put a new video here
+          with beautiful recitation for you to enjoy!
+        </h4>
         <b-embed
           class="embed"
           type="iframe"
