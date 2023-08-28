@@ -98,11 +98,12 @@ h5 {
 .about {
   grid-area: about;
   margin-left: 10px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .mission {
   grid-area: mission;
   margin-right: 20px;
+  margin-left: 10px;
 }
 .missionHeader {
   grid-area: missionHeader;
