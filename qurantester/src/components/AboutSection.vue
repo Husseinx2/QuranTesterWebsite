@@ -3,92 +3,67 @@
     <h1 class="aboutHeader">About Quran Tester</h1>
     <section class="about">
       <p>
-        The Quran is a profound source of wisdom, guidance, and spiritual
-        nourishment. Our mission is to provide a unique platform that enables
-        users to embark on a transformative journey of strengthening their
-        memorization skills and deepening their connection with the Quran.
-      </p>
-      <p>
-        QuranTester represents a comprehensive and user-centric solution for
-        Quran memorization and study, utilizing the power of Technology to
-        provide a seamless and engaging experience for users seeking to deepen
-        their memorization skills, love and connection with the Quranic text.
+        The Quran holds deep wisdom, guidance, and spiritual sustenance. Our
+        goal is to offer a distinct platform that allows individuals to begin a
+        transformative process of improving their memory skills and enriching
+        their relationship with the Quran. QuranTester offers an all-inclusive
+        and user-focused answer for learning and memorizing the Quran. It
+        employs technology to create a smooth and captivating learning journey,
+        catering to users aiming to enhance their memorization skills and
+        strengthen their bond with the Quranic verses.
       </p>
     </section>
     <h1 class="misionHeader">Our Mission</h1>
     <section class="mission">
       <p>
-        Our mission is to rebuild the lost connection with the Quran and empower
-        individuals in their pursuit of Quranic memorization. We understand the
-        challenges of finding a qualified teacher available at all times, and we
-        strive to remove the barriers hindering progress in this sacred journey.
-        Through our innovative Quran Tester page, we provide a comprehensive
-        solution to enhance your memorization skills. Our platform offers a
-        diverse range of tests designed to cater to your individual needs,
-        whether you are a beginner or an advanced memorizer. With us, you no
-        longer have to worry about the absence of a teacher, as our website is
-        here to guide and support you throughout your Quranic learning journey.
-        Embrace this transformative experience with us, and let the Quran flow
-        through your heart as you strengthen your connection with its divine
-        words. Together, we embark on a path of continuous growth, enabling you
-        to become a proficient Hafidth or Hafidtha.
+        We aim to reconnect people with the Quran, empowering their memorization
+        journey. We understand the challenges of finding constant guidance and
+        work to break down barriers. Our innovative Quran Tester page enhances
+        your skills with diverse tests, catering to all levels. No need to worry
+        about teacher availability; our platform supports your Quranic journey.
+        Embrace this transformative experience to strengthen your bond with the
+        Quran. Join us in continuous growth toward becoming a skilled
+        Hafidth/Hafidtha.
       </p>
     </section>
     <h1 class="benefitsHeader">
-      What Are the Benefits Of Reading And Memorizng The Quran?
+      What Are Some Benefits Of Reading And Memorizng The Quran?
     </h1>
     <section class="benefits">
       <ul>
         <li>
           <p>
-            <b>
-              The Prophet (ﷺ) said: "It shall be said - meaning to the one who
-              memorized the Qur'an - 'Recite, and rise up, recite (melodiously)
-              as you would recite in the world. For indeed your rank shall be at
-              the last Ayah you recited.'"
-            </b>
+            The Prophet (ﷺ) said: "It shall be said - meaning to the one who
+            memorized the Qur'an - 'Recite, and rise up, recite (melodiously) as
+            you would recite in the world. For indeed your rank shall be at the
+            last Ayah you recited.'"
           </p>
-          <span>(Jami` at-Tirmidhi 2914)</span>
+          <b> <span>(Jami` at-Tirmidhi 2914)</span></b>
         </li>
         <li>
           <p>
-            <b>
-              The Prophet (ﷺ) said: "If anyone recites the Qur'an and acts
-              according to its content, on the Day of Judgement his parents will
-              be given to wear a crown whose light is better than the light of
-              the sun in the dwellings of this world if it were among you. So
-              what do you think of him who acts according to this ?"
-            </b>
+            The Prophet (ﷺ) said: "If anyone recites the Qur'an and acts
+            according to its content, on the Day of Judgement his parents will
+            be given to wear a crown whose light is better than the light of the
+            sun in the dwellings of this world if it were among you. So what do
+            you think of him who acts according to this ?"
           </p>
-          <span>(Sunan Abi Dawud 1453)</span>
+          <b> <span>(Sunan Abi Dawud 1453)</span></b>
         </li>
       </ul>
-
-      <b
-        ><h5>
-          The Benefits of memorizing the quran are so much that we would have
-          trouble fitting it all in one page. We ask allah to make us among
-          those who are companions of the Quran.
-        </h5></b
-      >
     </section>
     <h1 class="Reminder">Message From Us</h1>
     <section class="support">
-      <h3>
-        This website and the software that supports it is far from finished and
-        we are making upgrades to it everyday.
-      </h3>
       <p>
-        We ask that you be patient as this website is still not fully complete.
-        If there are any problems with the website or you have any feedback you
-        can contact us through
-        <a href="https://www.linkedin.com/in/hussein210/">LinkedIn</a>
+        - We ask that you be patient with us as this website is still not fully
+        complete. If there are any problems with the website or if you have any
+        feedback you can contact us through
+        <a href="https://www.linkedin.com/in/hussein210/">LinkedIn</a>.
       </p>
 
-      <h3>Misc</h3>
       <p>
-        We ask that you to keep all the people who worked on this website in
-        your du'a
+        - We also ask that you to keep all the people who worked on this website
+        in your du'a
       </p>
     </section>
   </div>
@@ -149,6 +124,7 @@ h5 {
   margin-bottom: 45px;
 }
 .support p {
+  color: rgb(19, 20, 1);
   position: relative;
   margin-left: 15px;
 }
@@ -160,6 +136,9 @@ h5 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 span {
-  color: rgb(255, 0, 0);
+  font-size: 0.7rem;
+}
+a {
+  color: black;
 }
 </style>

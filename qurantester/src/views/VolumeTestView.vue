@@ -47,7 +47,7 @@ export default {
     };
   },
   created() {
-    this.volumeNumber = this.$route.params.id;  
+    this.volumeNumber = this.$route.params.id;
   },
 };
 </script>
@@ -55,7 +55,7 @@ export default {
 <style scoped>
 section {
   min-height: 100vh;
-  color:black;
+  color: black;
   align-items: center;
   background: linear-gradient(to bottom, #7ba9e0, #d2deec, #115292);
 }
