@@ -3,7 +3,7 @@
     <!-- Amount Correct -->
     <h1>{{ ammountCorrect }}/10</h1>
     <!-- Question -->
-    <h3 id="popover-target-1">{{ test.question.text }}</h3>
+    <p id="popover-target-1">{{ test.question.text }}</p>
     <b-popover
       class="popover"
       target="popover-target-1"
@@ -12,7 +12,6 @@
     >
       <audio v-bind:src="test.question.audioUrl" controls autoplay />
     </b-popover>
-    <br />
     <!-- prompt to display the question -->
     <b-button
       variant="info"
@@ -71,6 +70,7 @@ export default {
   props: ["item"],
   methods: {
     generateTest() {
+      this.test = {};
       apiService.hardVolumeTest(this.item).then((response) => {
         this.test = response.data;
       });
@@ -115,6 +115,9 @@ export default {
 div .tester {
   font-family: "hafs";
   text-align: center;
+}
+P {
+  font-size: 30px;
 }
 audio {
   width: 100%;

@@ -24,7 +24,7 @@
     </section>
     <div v-show="showTest">
       <h1>{{ ammountCorrect }}/10</h1>
-      <h3 id="popover-target-1">{{ test.question.text }}</h3>
+      <p id="popover-target-1">{{ test.question.text }}</p>
       <b-popover
         class="popover"
         target="popover-target-1"
@@ -101,6 +101,7 @@ export default {
       }
     },
     generateTest() {
+      this.test = {};
       apiService
         .multipleVolumesTest(this.item, this.choice)
         .then((response) => {
@@ -157,7 +158,6 @@ export default {
       this.volumes.push(i);
     }
   },
-
 };
 </script>
 
@@ -165,6 +165,9 @@ export default {
 div .tester {
   font-family: "hafs";
   text-align: center;
+}
+p {
+  font-size: 30px;
 }
 .button {
   color: black;

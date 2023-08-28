@@ -1,7 +1,7 @@
 <template>
   <div class="tester">
     <!-- Amount Correct -->
-    <h1>{{ammountCorrect}}/10</h1>
+    <h1>{{ ammountCorrect }}/10</h1>
     <!-- Question -->
     <p id="popover-target-1">{{ test.question.text }}</p>
     <b-popover
@@ -64,12 +64,13 @@ export default {
       selected: "",
       showQuestion: false,
       showAnswer: false,
-      ammountCorrect:0
+      ammountCorrect: 0,
     };
   },
   props: ["item"],
   methods: {
     generateTest() {
+      this.test = {};
       apiService.chapterTest(this.item).then((response) => {
         this.test = response.data;
       });
@@ -90,7 +91,7 @@ export default {
       if (this.selected) {
         if (this.selected == this.test.answer.text) {
           this.selected = "";
-          this.ammountCorrect +=1;
+          this.ammountCorrect += 1;
           if (this.ammountCorrect == 10) {
             this.$router.push("/test");
           } else {
@@ -114,7 +115,9 @@ export default {
 div .tester {
   font-family: "hafs";
   text-align: center;
-  font-size:30px
+}
+P {
+  font-size: 30px;
 }
 audio {
   width: 100%;
