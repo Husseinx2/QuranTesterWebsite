@@ -112,7 +112,7 @@ export default {
 
 <style scoped>
 div .tester {
-  font-family: "p22-v1";
+  font-family: "hafs";
   text-align: center;
   font-size:30px
 }

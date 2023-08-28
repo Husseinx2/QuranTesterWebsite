@@ -179,7 +179,7 @@ export default {
   background-color:white;
 }
 div .tester {
-  font-family: "p22-v1";
+  font-family: "hafs";
   text-align: center;
 }
 audio {
