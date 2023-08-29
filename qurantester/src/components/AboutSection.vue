@@ -3,27 +3,19 @@
     <h1 class="aboutHeader">About Quran Tester</h1>
     <section class="about">
       <p>
-        The Quran holds deep wisdom, guidance, and spiritual sustenance. Our
-        goal is to offer a distinct platform that allows individuals to begin a
-        transformative process of improving their memory skills and enriching
-        their relationship with the Quran. QuranTester offers an all-inclusive
-        and user-focused answer for learning and memorizing the Quran. It
-        employs technology to create a smooth and captivating learning journey,
-        catering to users aiming to enhance their memorization skills and
-        strengthen their bond with the Quranic verses.
+        QuranTester offers an all-inclusive and user-focused answer for learning
+        and memorizing the Quran. It employs technology to cater to users aiming
+        to enhance and strengthen their memorization skills. No need to worry
+        about teacher availability; our platform supports your Quranic journey!
       </p>
     </section>
     <h1 class="misionHeader">Our Mission</h1>
     <section class="mission">
       <p>
-        We aim to reconnect people with the Quran, empowering their memorization
-        journey. We understand the challenges of finding constant guidance and
-        work to break down barriers. Our innovative Quran Tester page enhances
-        your skills with diverse tests, catering to all levels. No need to worry
-        about teacher availability; our platform supports your Quranic journey.
-        Embrace this transformative experience to strengthen your bond with the
-        Quran. Join us in continuous growth toward becoming a skilled
-        Hafidth/Hafidtha.
+        Our goal is to offer a distinct platform that allows individuals to
+        begin a transformative process of improving their memory skills and
+        enriching their relationship with the Quran. Join us today to
+        continuously grow toward becoming a skilled Hafidh/Hafidha!
       </p>
     </section>
     <h1 class="benefitsHeader">

@@ -135,7 +135,7 @@ export default {
         if (this.selected == this.test.name.name) {
           this.selected = "";
           this.ammountCorrect += 1;
-          if (this.$store.state.ammountCorrect == 10) {
+          if (this.ammountCorrect == 10) {
             this.$router.push("/test");
           } else {
             this.toggleButton();
