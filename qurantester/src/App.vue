@@ -2,14 +2,13 @@
   <div >
     <page-header/>
     <router-view/>
-    <Analytics/>
   </div>
 </template>
 <script>
 import PageHeader from './components/PageHeader.vue';
-import {Analytics} from '@vercel/analytics'
+import {inject} from '@vercel/analytics'
 export default {
-  components: { PageHeader , Analytics},
+  components: { PageHeader },
    data() {
      return {
         choice: {}
@@ -17,6 +16,7 @@ export default {
    },
     created(){
       this.$store.commit("GET_CHAPTERS");
+      inject();
     }
   
 }
