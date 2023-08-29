@@ -26,13 +26,15 @@
       <!-- Amount Correct -->
       <h1>{{ ammountCorrect }}/10</h1>
       <!-- Question -->
-      <p id="popover-target-1">{{ test.question.text }}</p>
+      <p id="popover-target-1" class="question">{{ test.question.text }}</p>
       <b-popover
         class="popover"
         target="popover-target-1"
         triggers="click"
         placement="center"
       >
+        <p>{{ test.question.translation }}</p>
+
         <audio v-bind:src="test.question.audioUrl" controls autoplay />
       </b-popover>
       <!-- prompt to display the question -->
@@ -72,6 +74,7 @@
           triggers="click"
           placement="center"
         >
+          <p>{{ test.answer.translation }}</p>
           <audio v-bind:src="test.answer.audioUrl" controls autoplay />
         </b-popover>
         <b-button variant="info" v-on:click="hideAnswer">Continue</b-button>
@@ -176,7 +179,7 @@ div .tester {
   font-family: "hafs";
   text-align: center;
 }
-p {
+.question {
   font-size: 30px;
 }
 audio {

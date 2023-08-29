@@ -26,13 +26,14 @@
       <!-- Amount Correct -->
       <h1>{{ ammountCorrect }}/10</h1>
       <!-- Question -->
-      <p id="popover-target-1">{{ test.verse.text }}</p>
+      <p id="popover-target-1" class="question">{{ test.verse.text }}</p>
       <b-popover
         class="popover"
         target="popover-target-1"
         triggers="click"
         placement="center"
       >
+        <p>{{ test.verse.translation }}</p>
         <audio v-bind:src="test.verse.audioUrl" controls autoplay />
       </b-popover>
       <!-- prompt to display the question -->
@@ -112,7 +113,7 @@ export default {
       }
     },
     generateTest() {
-      this.test = {}
+      this.test = {};
       apiService.multipleNameTest(this.item, this.choice).then((response) => {
         this.test = response.data;
       });
@@ -173,18 +174,17 @@ export default {
 
 <style scoped>
 .button {
-  color:black
+  color: black;
 }
-.button:hover{ 
-  background-color:white;
+.button:hover {
+  background-color: white;
 }
 div .tester {
   font-family: "hafs";
   text-align: center;
 }
-p {
-    font-size:30px
-
+.question {
+  font-size: 30px;
 }
 audio {
   width: 100%;
