@@ -58,7 +58,7 @@
             We ask that you be patient with us as this website is still not
             fully complete. If there are any problems with the website or if you
             have any feedback you can contact us through
-            <a href="https://www.linkedin.com/in/hussein210/">LinkedIn</a>.
+            <a href="https://www.linkedin.com/in/hussein210/">LinkedIn</a>
           </p>
         </li>
         <li>
