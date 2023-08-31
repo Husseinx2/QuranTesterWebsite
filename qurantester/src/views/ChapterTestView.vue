@@ -1,11 +1,14 @@
 <template>
   <section>
     <div>
-      <b-tabs content-class="mt-9"  >
-        <b-tab title="Chapter Test" lazy
-          ><single-chapter-test v-bind:item="chapterNumber"  /></b-tab>
-        <b-tab title="Hard Chapter Test" lazy
-          ><hardchapter-test v-bind:item="chapterNumber" />
+      <b-tabs content-class="mt-9">
+        <b-tab lazy>
+          <template #title><span>Chapter Test</span></template>
+          <single-chapter-test v-bind:item="chapterNumber"
+        /></b-tab>
+        <b-tab lazy>
+          <template #title><span>Hard Chapter Test</span></template>
+          <hardchapter-test v-bind:item="chapterNumber" />
         </b-tab>
       </b-tabs>
     </div>
@@ -24,16 +27,18 @@ export default {
   },
   created() {
     this.chapterNumber = this.$route.params.id;
-    
   },
 };
 </script>
 
 <style scoped>
-section{
+section {
   min-height: 100vh;
-  color:black;
+  color: black;
   align-items: center;
-  background: linear-gradient(to bottom,  #7ba9e0,#d2deec, #001f3f);
+  background: linear-gradient(to bottom, #7ba9e0, #d2deec, #001f3f);
+}
+span {
+  color: black;
 }
 </style>
