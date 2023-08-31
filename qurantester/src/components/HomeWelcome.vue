@@ -9,7 +9,7 @@
     </section>
     <section >
       <h2 v-show="ayah.text">
-        Allah <span>(SWT)</span> Says In The Holy Quran:
+        Allah <span>(SWT)</span> says in The Holy Quran:
       </h2>
 
       <h2 id="popover-target-1" class="text">{{ ayah.text }}</h2>
