@@ -110,7 +110,7 @@ audio {
 }
 @media (max-width: 768px) {
   .embed {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
   .link {
