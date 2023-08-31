@@ -111,7 +111,7 @@ audio {
 @media (max-width: 768px) {
   .embed {
     width: 80%;
-    height: auto;
+    height: 450px;
   }
   .link {
     font-size: 14px;
