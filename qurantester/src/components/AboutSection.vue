@@ -130,7 +130,7 @@ h5 {
   position: relative;
   margin-left: 15px;
 }
-.reminder {
+.Reminder {
   grid-area: supportHeader;
 }
 
