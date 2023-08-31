@@ -46,17 +46,22 @@
     </section>
     <h1 class="Reminder">Message From Us</h1>
     <section class="support">
-      <p>
-        - We ask that you be patient with us as this website is still not fully
-        complete. If there are any problems with the website or if you have any
-        feedback you can contact us through
-        <a href="https://www.linkedin.com/in/hussein210/">LinkedIn</a>.
-      </p>
-
-      <p>
-        - We also ask that you to keep all the people who worked on this website
-        in your du'a
-      </p>
+      <ul>
+      <li>
+        <p>
+           We ask that you be patient with us as this website is still not
+          fully complete. If there are any problems with the website or if you
+          have any feedback you can contact us through
+          <a href="https://www.linkedin.com/in/hussein210/">LinkedIn</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+           We also ask that you to keep all the people who worked on this
+          website in your du'a
+        </p>
+      </li>
+      </ul>
     </section>
   </div>
 </template>
@@ -124,10 +129,7 @@ h5 {
 .supportHeader {
   grid-area: supportHeader;
 }
-.about p,
-.mission p {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
+
 span {
   font-size: 0.7rem;
 }
