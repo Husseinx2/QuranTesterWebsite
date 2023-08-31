@@ -114,9 +114,7 @@ h5 {
 .benefits {
   grid-area: benefits;
 }
-.benefits p {
-  font-family: Times New Roman, Times, serif;
-}
+
 .support {
   grid-area: support;
   margin-bottom: 45px;
