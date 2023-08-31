@@ -2,10 +2,14 @@
   <section class="section">
     <div>
       <b-tabs content-class="mt-3">
-        <b-tab title="Test By Chapter" active
-          ><p><chapter-test /></p
+        <b-tab active>
+          <template #title><span>Test By Chapter</span></template>
+          <p><chapter-test /></p
         ></b-tab>
-        <b-tab title="Test By Volume"><volume-test /></b-tab>
+        <b-tab>
+          <template #title><span>Test By Volume</span></template>
+          <volume-test
+        /></b-tab>
       </b-tabs>
     </div>
   </section>
@@ -24,5 +28,8 @@ export default {
   min-height: 100vh;
   align-items: center;
   background: linear-gradient(to bottom, #7ba9e0, #d2deec, #115292);
+}
+span {
+  color:black
 }
 </style>
