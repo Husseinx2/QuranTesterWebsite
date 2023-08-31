@@ -1,8 +1,13 @@
 <template>
   <div class="home">
-    <section class="header">
+    <section>
       <h1 class="header">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h1>
       <br />
+      <h1>WELCOME TO QURAN TESTER</h1>
+      <br />
+      <br />
+    </section>
+    <section >
       <h2 v-show="ayah.text">
         Allah <span>(SWT)</span> Says In The Holy Quran:
       </h2>
@@ -10,40 +15,24 @@
       <h2 id="popover-target-1" class="text">{{ ayah.text }}</h2>
       <b-popover target="popover-target-1" triggers="click" placement="center">
         <p class="translation">
-           {{ayah.translation}} 
+          {{ ayah.translation }}
         </p>
         <audio v-bind:src="ayah.audioUrl" controls />
       </b-popover>
-      <h3 class="header">
+      <h3>
         Start your journey towards being a part of the preservation of the
-        <b>Quran</b> Today!
+        Quran today!
       </h3>
-    </section>
-    <section>
-      <h1>Welcome To Quran Tester:</h1>
-      <ul>
-        <li>
-          <router-link to="/about" class="link">
-            <h1>About Quran Tester</h1></router-link
-          >
-        </li>
-        <li>
-          <router-link to="/test" class="link">
-            <h1>Start Testing Your Memorization</h1>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/resources" class="link">
-            <h1>Resources</h1>
-          </router-link>
-        </li>
-      </ul>
+      <br/>
+      <br />
+      <!-- video section -->
       <div class="video">
         <h4>
-          One of the best ways to strengthen your connection and love with the
-          Quran is to Listen. Every couple of days we'll put a new video here
-          with beautiful recitation for you to enjoy!
+          To deepen your connection and love for the Quran, try the simple
+          practice of listening.<br/> We'll be regularly posting new videos here,
+          featuring beautiful recitations for you to enjoy!
         </h4>
+        <br/>
         <b-embed
           class="embed"
           type="iframe"
@@ -79,12 +68,14 @@ export default {
 
 <style scoped>
 .home {
+  min-height: 100vh;
+  text-align: center;
   background: linear-gradient(to bottom, #7ba9e0, #d2deec, #115292);
 }
 .header {
   font-family: p22-v1;
-  text-align: center;
 }
+
 ul {
   list-style-type: none;
 }
