@@ -67,7 +67,7 @@
         <b-popover
           class="popover"
           target="popover-target-2"
-          triggers="hover"
+          triggers="click"
           placement="center"
         >
           <p>{{ test.answer.translation }}</p>
