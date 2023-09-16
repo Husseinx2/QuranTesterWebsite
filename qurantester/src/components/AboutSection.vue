@@ -57,8 +57,10 @@
           <p>
             We ask that you be patient with us as this website is still not
             fully complete. If there are any problems with the website or if you
-            have any feedback you can contact us through
-            <a href="https://www.linkedin.com/in/hussein210/">LinkedIn</a>
+            have any feedback you can contact us by clicking
+            <b-button id="toggle" v-b-modal.modal-1 size="sm" variant="primary"
+              >HERE</b-button
+            >
           </p>
         </li>
         <li>
@@ -69,15 +71,19 @@
         </li>
       </ul>
     </section>
+    <contact-us id="modal-1" />
   </div>
 </template>
 
 <script>
-export default {};
+import ContactUs from './ContactUs.vue';
+export default {
+  components:{ContactUs},
+};
 </script>
 
 <style scoped>
-div {
+.section {
   min-height: 100vh;
   display: grid;
   grid-template: 1fr 1fr;
@@ -133,11 +139,10 @@ h5 {
 .Reminder {
   grid-area: supportHeader;
 }
-
 span {
   font-size: 0.7rem;
 }
-a {
-  color: black;
+.toggle {
+  color: white;
 }
 </style>
