@@ -95,6 +95,7 @@ export default {
           this.selected = "";
           this.ammountCorrect += 1;
           if (this.ammountCorrect == 10) {
+            localStorage.setItem(this.item + 100, this.ammountCorrect);
             this.$router.push("/test");
           } else {
             this.toggleButton();
