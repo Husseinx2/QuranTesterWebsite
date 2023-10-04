@@ -1,14 +1,20 @@
 <template>
   <section class="test-tab">
-    <select  v-model="choice">
-      <option v-for="volume in volumes" v-bind:key="volume" v-bind:value="volume">
+    <select v-model="choice">
+      <option
+        v-for="volume in volumes"
+        v-bind:key="volume"
+        v-bind:value="volume"
+      >
         {{ volume }}
       </option>
     </select>
     <br />
     <br />
 
-    <b-button variant="outline-primary" class="button" v-on:click="submit">Start Test</b-button>
+    <b-button variant="outline-primary" class="button" v-on:click="submit"
+      >Start Test</b-button
+    >
   </section>
 </template>
 
@@ -18,7 +24,8 @@ export default {
   data() {
     return {
       volumes: [],
-      choice: 1
+      choice: 1,
+      progress: [],
     };
   },
   methods: {
@@ -27,18 +34,30 @@ export default {
         this.$router.push({ name: "volumeTest", params: { id: this.choice } });
       }
     },
+    getProgress() {
+      this.volumes.forEach((volume) => {
+        this.progress.push(localStorage.getItem(volume));
+      });
+
+      this.progress.forEach((current) => {
+        if (!current) {
+          current = 0;
+        }
+      });
+    },
   },
   created() {
     for (let i = 1; i <= 30; i++) {
       this.volumes.push(i);
     }
+    this.getProgress();
   },
 };
 </script>
 
 <style scoped>
 .button {
-  color:black;
+  color: black;
 }
 .button:hover {
   background-color: white;

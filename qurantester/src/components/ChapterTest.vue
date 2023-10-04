@@ -7,7 +7,8 @@
         v-bind:key="chapter.number"
         v-bind:value="chapter.number"
       >
-        {{ chapter.number }}. {{ chapter.englishName }} || {{ chapter.name }}
+        {{ chapter.number }}. {{ chapter.englishName }} || {{ chapter.name }} ||
+        <span>Score: {{ progress[chapter.number - 1] }}/10</span>
       </option>
     </select>
     <br />
@@ -28,6 +29,8 @@ export default {
     return {
       choice: 0,
       errorMessage: false,
+      progress: [],
+      chapterNumbers: [],
     };
   },
   methods: {
@@ -38,6 +41,24 @@ export default {
         this.errorMessage = true;
       }
     },
+    getProgress() {
+      this.chapterNumbers.forEach((chapter) => {
+        let score = localStorage.getItem(chapter);
+        if (score) {
+          this.progress.push(localStorage.getItem(chapter));
+        }
+        else {
+          this.progress.push(0);
+        }
+      });
+    },
+  },
+  created() {
+    localStorage.setItem(101, 10);
+    for (let i = 101; i <= 214; i++) {
+      this.chapterNumbers.push(i);
+    }
+    this.getProgress();
   },
 };
 </script>
