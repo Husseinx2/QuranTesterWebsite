@@ -2,9 +2,8 @@
   <b-modal id="modal-1" title="Contact Us" @ok="handleOk">
     <b-form>
       <b-form-group
-        label="Email"
+        label="Your Email"
         label-for="email"
-        description="Email we can contact you through"
       >
         <b-form-input id="email" type="email" v-model="contact.emailAdress" />
       </b-form-group>
