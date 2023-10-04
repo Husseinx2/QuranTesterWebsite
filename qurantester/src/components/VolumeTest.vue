@@ -25,7 +25,7 @@ export default {
     return {
       volumes: [],
       choice: 1,
-      progress:[]
+      progress: [],
     };
   },
   methods: {
@@ -38,13 +38,12 @@ export default {
       this.volumes.forEach((volume) => {
         this.progress.push(localStorage.getItem(volume));
       });
-      
+
       this.progress.forEach((current) => {
         if (!current) {
-          console.log("reached at")
           current = 0;
         }
-      })
+      });
     },
   },
   created() {
