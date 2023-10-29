@@ -54,7 +54,6 @@ export default {
     },
   },
   created() {
-    localStorage.setItem(101, 10);
     for (let i = 101; i <= 214; i++) {
       this.chapterNumbers.push(i);
     }
