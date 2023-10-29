@@ -67,6 +67,7 @@ export default {
       showQuestion: false,
       showAnswer: false,
       ammountCorrect: 0,
+      QuestionsAsked: 0,
     };
   },
   props: ["item"],
@@ -94,7 +95,8 @@ export default {
         if (this.selected == this.test.answer.text) {
           this.selected = "";
           this.ammountCorrect += 1;
-          if (this.ammountCorrect == 10) {
+          this.QuestionsAsked += 1;
+          if (this.QuestionsAsked == 10) {
             localStorage.setItem(this.item + 100, this.ammountCorrect);
             this.$router.push("/test");
           } else {
@@ -102,8 +104,14 @@ export default {
             this.generateTest();
           }
         } else {
-          this.showQuestion = false;
-          this.showAnswer = true;
+          this.QuestionsAsked += 1;
+          if (this.QuestionsAsked == 10) {
+            localStorage.setItem(this.item + 100, this.ammountCorrect);
+            this.$router.push("/test");
+          } else {
+            this.showQuestion = false;
+            this.showAnswer = true;
+          }
         }
       }
     },
