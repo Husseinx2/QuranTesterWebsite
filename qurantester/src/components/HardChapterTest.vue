@@ -81,6 +81,9 @@ export default {
     hideAnswer() {
       this.showAnswer = false;
       this.selected = "";
+      if (this.QuestionsAsked == 10) {
+        this.$router.push("/test");
+      }
       this.generateTest();
     },
     toggleButton() {
@@ -105,13 +108,8 @@ export default {
           }
         } else {
           this.QuestionsAsked += 1;
-          if (this.QuestionsAsked == 10) {
-            localStorage.setItem(this.item + 100, this.ammountCorrect);
-            this.$router.push("/test");
-          } else {
-            this.showQuestion = false;
-            this.showAnswer = true;
-          }
+          this.showQuestion = false;
+          this.showAnswer = true;
         }
       }
     },
