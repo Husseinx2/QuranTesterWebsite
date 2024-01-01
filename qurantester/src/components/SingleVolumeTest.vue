@@ -7,8 +7,8 @@
       target="popover-target-1"
       triggers="click"
       placement="center"
-    > 
-      <p>{{test.question.translation}}</p>
+    >
+      <p>{{ test.question.translation }}</p>
       <audio v-bind:src="test.question.audioUrl" controls autoplay />
     </b-popover>
     <b-button
@@ -46,7 +46,7 @@
         triggers="click"
         placement="center"
       >
-         <p>{{test.answer.translation}}</p>
+        <p>{{ test.answer.translation }}</p>
         <audio v-bind:src="test.answer.audioUrl" controls autoplay />
       </b-popover>
       <b-button variant="info" v-on:click="hideAnswer">Continue</b-button>
@@ -63,6 +63,7 @@ export default {
       showQuestion: false,
       showAnswer: false,
       ammountCorrect: 0,
+      QuestionsAsked: 0,
     };
   },
   props: ["item"],
@@ -83,19 +84,24 @@ export default {
     hideAnswer() {
       this.showAnswer = false;
       this.selected = "";
+      if (this.QuestionsAsked == 10) {
+        this.$router.push("/test");
+      }
       this.generateTest();
     },
     submit() {
       if (this.selected) {
         if (this.selected == this.test.answer.text) {
           this.ammountCorrect += 1;
-          if (this.ammountCorrect == 10) {
+          this.QuestionsAsked += 1;
+          if (this.QuestionsAsked == 10) {
             this.$router.push("/test");
           } else {
             this.toggleButton();
             this.generateTest();
           }
         } else {
+          this.QuestionsAsked += 1;
           this.showQuestion = false;
           this.showAnswer = true;
         }
@@ -122,6 +128,4 @@ audio {
 .popover {
   width: 350px;
 }
-
-
 </style>
