@@ -96,6 +96,8 @@ export default {
       volumes: [],
       choice: 1,
       showSelect: true,
+      QuestionsAsked:0
+      
     };
   },
   props: ["item"],
@@ -115,9 +117,12 @@ export default {
           this.test = response.data;
         });
     },
-    hideAnswer() {
+   hideAnswer() {
       this.showAnswer = false;
       this.selected = "";
+      if (this.QuestionsAsked == 10) {
+        this.$router.push("/test");
+      }
       this.generateTest();
     },
     toggleButton() {
@@ -127,18 +132,19 @@ export default {
         this.showQuestion = true;
       }
     },
-    submit() {
+     submit() {
       if (this.selected) {
         if (this.selected == this.test.answer.text) {
-          this.selected = "";
           this.ammountCorrect += 1;
-          if (this.ammountCorrect == 10) {
+          this.QuestionsAsked += 1;
+          if (this.QuestionsAsked == 10) {
             this.$router.push("/test");
           } else {
             this.toggleButton();
             this.generateTest();
           }
         } else {
+          this.QuestionsAsked += 1;
           this.showQuestion = false;
           this.showAnswer = true;
         }
