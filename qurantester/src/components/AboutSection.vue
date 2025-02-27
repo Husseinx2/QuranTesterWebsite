@@ -65,7 +65,7 @@
         </li>
         <li>
           <p>
-            We also ask that you to keep all the people who worked on this
+            We also ask that you keep all the people who worked on this
             website in your du'a
           </p>
         </li>
