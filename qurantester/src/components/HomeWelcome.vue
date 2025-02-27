@@ -37,7 +37,7 @@
           class="embed"
           type="iframe"
           aspect="16by9"
-          src="https://www.youtube.com/embed/a5VpbEBHDZw?si=IfN_5mwbEMFhQlkY"
+          src="https://www.youtube.com/embed/9wy9G3y23qw?si=QVuxeqrr6yec2-cW"
           allowfullscreen
         ></b-embed>
       </div>
